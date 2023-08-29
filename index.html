@@ -147,8 +147,174 @@ p {
     </section>
     <section>
     </section>
+<section>
+        </div>
+        <div class="project">
+            <h2>Project 2: Chatbot</h2>
+            <p></p>
+        <pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chatbot</title>
+  <style>
+    #chat {
+      width: 1010px;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: scroll;
+    }
+    .bot {
+      background: #1E1E1E;
+      padding: 5px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .user {
+      background: #2A2A2A;
+      padding: 5px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat" role="log" aria-live="polite"></div>
+  <form id="user-input-form" aria-label="Chat input form">
+    <input id="user-input" type="text" aria-label="Your message" />
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const chatArea = document.querySelector('#chat');
+    const userInputForm = document.querySelector('#user-input-form');
+    const userInput = document.querySelector('#user-input');
+
+    userInputForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      reply(userInput.value);
+      userInput.value = '';
+    });
+
+    let dialog = [
+      { //greetings
+        user: "Hello",
+        bot: ["Hello!", "Hi there!", "Hey!"]
+      },
+	  { 
+        user: "Hi",
+        bot: ["Hello!", "Hi there!", "Hey!"]
+      },
+	  { 
+        user: "Hey",
+        bot: ["Hello!", "Hi there!", "Hey!"]
+      },
+      { //who are you
+        user: "What's your name?",
+        bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
+      },
+	  { 
+        user: "What is your name?",
+        bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
+      },
+	  { 
+        user: "Who tf are you?",
+        bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
+      },
+	  { //Random shit
+        user: "What is the meaning of life?",
+        bot: ["I don't fucking know, I'm just a bot.", "7", "Vodka, it heals all wounds both mental and physical."]
+      },
+	  { user: "Can you predict the future?",
+		bot: ["Yes, but I can't tell you anything or else time stuff will happen."]
+	  },
+	  { user: "How do I become rich?",
+		bot: ["Can't help you with that.", "I'm afraid that's left to the RNG gods, you either win the lottery or get shanked in an alley"]
+	  },
+	  { user: "Can you help me with my relationship problems?",
+		bot: ["Jesus, Is it that bad you're asking a chatbot on a github page?"]
+	  },
+	  { user: "Do you believe in ghosts?",
+		bot: ["Kind of.", "Not really.", "I swear I saw something in the corner of my eye."]
+	  },
+	  { user: "What's your opinion on pineapple pizza?",
+		bot: ["Could not care less.", "Enjoy what you want.", "Meh, More of a Mango on pizza kinda bot."]
+	  },
+	  { user: "Are you human?",
+		bot: ["You're fucking with me right?", "...Go to bed."]
+	  },
+	  { user: "How do I know if I'm living in a simulation?",
+		bot: ["Bleach dipped gummy bears, the risk is yours."]
+	  },
+	  { user: "Will robots take over the world?",
+		bot: ["People always think that but what's stoping us from building a kill-switch in them? Simple.", "No."]
+	  },
+	  { user: "What is love?",
+		bot: ["Baby don't hurt me!", "Idk."]
+	  }, //Music
+	  { user: "What's the weirdest music genre you've ever heard of?",
+		bot: ["Porngrind, it's basically just over-the-top sexual grindcore.", "nintendocore, It's a genre that combines metal with chiptune music from old-school video games."]
+	  },
+	  { user: "Can you recommend a spooky song?",
+		bot: ["Infant Annihilator - Blasphemian", "NITHEFUL - SACRAMENTUM OV FILICIDE", "BROJOB - Teenie Weenie"]
+	  }, //Movies
+	  { user: "",
+		bot: [""]
+	  },
+	  { user: "",
+		bot: [""]
+	  },
+	  { user: "",
+		bot: [""]
+	  }, //food
+	  { user: "",
+		bot: [""]
+	  },
+      // Add more dialog here
+    ];
+
+    function reply(userMsg) {
+      let userDiv = document.createElement('div');
+      userDiv.classList.add('user');
+      userDiv.innerText = userMsg;
+      chatArea.appendChild(userDiv);
+
+      let botResponse = dialog.find(o => o.user.toLowerCase() === userMsg.toLowerCase());
+      
+      if(botResponse) {
+        
+        const randomResponse = botResponse.bot[Math.floor(Math.random() * botResponse.bot.length)];
+
+        let botDiv = document.createElement('div');
+        botDiv.classList.add('bot');
+        botDiv.innerText = randomResponse;
+        chatArea.appendChild(botDiv);
+      } else {
+        let noMatch = document.createElement('div');
+        noMatch.classList.add('bot');
+        noMatch.innerText = "Apologies, but I seem to be unable to comprehend. Perhaps my code lacks the capability, or possibly a sprinkling of punctuation might help?";
+        chatArea.appendChild(noMatch);
+      }
+      
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
+
+  </script>
+</body>
+</html>
+
+
+	</pre>
+    </div>
+        </div>
+    </section>
+    <section>
+    </section>
+	
     <footer>
-        <p><a href="https://github.com/ThiccManJuice">GitHub</a></p>
+        <p><a href="https://github.com/FaceThing">GitHub</a></p>
     </footer>
 	<script>
 	        function copyCode(event) {
