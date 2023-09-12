@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaceThing's Brewery</title>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
-	
         .dont {
             background-color: #1E1E1E;
             color: #F8F8F8;
@@ -16,8 +15,8 @@
             border-radius: 5px;
             margin: 10px 0;
         }
-		
-		        .copy-button {
+
+        .copy-button {
             background-color: #333;
             color: #F8F8F8;
             border: none;
@@ -29,7 +28,7 @@
             right: 5px;
             cursor: pointer;
         }
-		
+
         body {
             background-color: #111;
             color: #ddd;
@@ -37,22 +36,28 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #000;
             padding: 20px;
             text-align: center;
         }
+
         h1 {
             color: silver;
             margin: 0;
         }
+
         section {
             padding: 40px;
         }
+
         .project {
             border: 1px solid silver;
             padding: 20px;
             margin: 20px 0;
+            max-width: 100%; 
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -151,12 +156,12 @@ p {
         </div>
         <div class="project">
             <h2>Project 2: Chatbot</h2>
-            <p></p>
+            <p>A passive-aggressive chatbot </p>
         <pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chatbot</title>
+  <title>Bethany</title>
   <style>
     #chat {
       width: 1010px;
@@ -199,84 +204,7 @@ p {
     });
 
     let dialog = [
-      { //greetings
-        user: "Hello",
-        bot: ["Hello!", "Hi there!", "Hey!"]
-      },
-	  { 
-        user: "Hi",
-        bot: ["Hello!", "Hi there!", "Hey!"]
-      },
-	  { 
-        user: "Hey",
-        bot: ["Hello!", "Hi there!", "Hey!"]
-      },
-      { //who are you
-        user: "What's your name?",
-        bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
-      },
-	  { 
-        user: "What is your name?",
-        bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
-      },
-	  { 
-        user: "Who tf are you?",
-        bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
-      },
-	  {
-        user: "Do you have a name?",
-	bot: ["Bot.", "Call me Bot.", "I'm just Bot."]
-      },
-	  { //Random shit
-        user: "What is the meaning of life?",
-        bot: ["I don't fucking know, I'm just a bot.", "7", "Vodka, it heals all wounds both mental and physical."]
-      },
-	  { user: "Can you predict the future?",
-		bot: ["Yes, but I can't tell you anything or else time stuff will happen."]
-	  },
-	  { user: "How do I become rich?",
-		bot: ["Can't help you with that.", "I'm afraid that's left to the RNG gods, you either win the lottery or get shanked in an alley"]
-	  },
-	  { user: "Can you help me with my relationship problems?",
-		bot: ["Jesus, Is it that bad you're asking a chatbot on a github page?"]
-	  },
-	  { user: "Do you believe in ghosts?",
-		bot: ["Kind of.", "Not really.", "I swear I saw something in the corner of my eye."]
-	  },
-	  { user: "What's your opinion on pineapple pizza?",
-		bot: ["Could not care less.", "Enjoy what you want.", "Meh, More of a Mango on pizza kinda bot."]
-	  },
-	  { user: "Are you human?",
-		bot: ["You're fucking with me right?", "...Go to bed."]
-	  },
-	  { user: "How do I know if I'm living in a simulation?",
-		bot: ["Bleach dipped gummy bears, the risk is yours."]
-	  },
-	  { user: "Will robots take over the world?",
-		bot: ["People always think that but what's stoping us from building a kill-switch in them? Simple.", "No."]
-	  },
-	  { user: "What is love?",
-		bot: ["Baby don't hurt me!", "Idk."]
-	  }, //Music
-	  { user: "What's the weirdest music genre you've ever heard of?",
-		bot: ["Porngrind, it's basically just over-the-top sexual grindcore.", "nintendocore, It's a genre that combines metal with chiptune music from old-school video games."]
-	  },
-	  { user: "Can you recommend a spooky song?",
-		bot: ["Infant Annihilator - Blasphemian", "NITHEFUL - SACRAMENTUM OV FILICIDE", "BROJOB - Teenie Weenie"]
-	  }, //Movies
-	  { user: "",
-		bot: [""]
-	  },
-	  { user: "",
-		bot: [""]
-	  },
-	  { user: "",
-		bot: [""]
-	  }, //food
-	  { user: "",
-		bot: [""]
-	  },
-      // Add more dialog here
+	    \* REMEBER TO EDIT THIS *\
     ];
 
     function reply(userMsg) {
@@ -298,7 +226,7 @@ p {
       } else {
         let noMatch = document.createElement('div');
         noMatch.classList.add('bot');
-        noMatch.innerText = "Apologies, but I seem to be unable to comprehend. Perhaps my code lacks the capability, or possibly a sprinkling of punctuation might help?";
+        noMatch.innerText = "Oh, how surprising, I seem to be unable to comprehend. Perhaps my code lacks the capability, or possibly a sprinkling of punctuation might help?";
         chatArea.appendChild(noMatch);
       }
       
