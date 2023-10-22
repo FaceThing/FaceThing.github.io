@@ -156,7 +156,7 @@ p {
         </div>
         <div class="project">
             <h2>Project 2: Chatbot</h2>
-            <p>A passive-aggressive chatbot </p>
+            <p> </p>
         <pre>
 <!DOCTYPE html>
 <html lang="en">
@@ -204,7 +204,26 @@ p {
     });
 
     let dialog = [
-	    \* REMEBER TO EDIT THIS *\
+	          { 
+        user: "Hello",
+        bot: ["Hello!", "Hi there!", "Hey!"]
+      },
+     {
+        user: "Hi",
+        bot: ["Hello!", "Hi there!", "Hey!"]
+      },
+     {
+        user: "Hey",
+        bot: ["Hello!", "Hi there!", "Hey!"]
+      },
+     {
+	user: "How are you?",
+	bot: ["Okay","Fine","Alright"]
+     },
+    {
+        user: "what can you do?,
+	bot: ["As much as fuckfaces coding allows me","Basically nothing"]
+    },
     ];
 
     function reply(userMsg) {
